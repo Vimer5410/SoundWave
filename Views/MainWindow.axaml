@@ -1,0 +1,204 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:SoundWave.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="1200" d:DesignHeight="900"
+        x:Class="SoundWave.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="SoundWave"
+        Height="900"
+        Width="1200"
+        WindowStartupLocation="CenterScreen"
+        TransparencyLevelHint="AcrylicBlur"
+        Background="Transparent"
+        ExtendClientAreaToDecorationsHint="True">
+    
+    <Grid>
+        <SplitView IsPaneOpen="False"
+                   OpenPaneLength="60"
+                   CompactPaneLength="60"
+                   DisplayMode="CompactInline">
+        
+        <SplitView.Pane>
+            
+            <StackPanel  HorizontalAlignment="Center" Background="#191919" UseLayoutRounding="True">
+                
+                <Image Source="../Assets/music_9152807.png" HorizontalAlignment="Center" Height="65" Width="65" VerticalAlignment="Center"></Image>
+                
+                <Button Cursor="Hand" Margin="0,55,0,5" Click="Button_ShowMain_OnClick">
+                    <Button.Content>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="../Assets/free-icon-home-12561621.png" Width="40" Height="40" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Button.Content>
+                    <Button.Styles>
+                        <Style Selector="Button:pointerover ContentPresenter">
+                            <Setter Property="Background" Value="Transparent"></Setter>
+                        </Style>
+                    </Button.Styles>
+                    <Button.Styles>
+                        <Style Selector="Button">
+                            <Setter Property="Background" Value="Transparent"></Setter>
+                        </Style>
+                    </Button.Styles>
+                </Button>
+                
+                <Button Cursor="Hand"  Margin="0,15,0,5" Click="Button_ShowAddMusic_OnClick" >
+                    <Button.Content>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="../Assets/free-icon-add-to-playlist-11737361.png" Width="40" Height="40" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Button.Content>
+                    <Button.Styles>
+                        <Style Selector="Button:pointerover ContentPresenter">
+                            <Setter Property="Background" Value="Transparent"></Setter>
+                        </Style>
+                    </Button.Styles>
+                    <Button.Styles>
+                        <Style Selector="Button">
+                            <Setter Property="Background" Value="Transparent"></Setter>
+                        </Style>
+                    </Button.Styles>
+                </Button>
+                
+                <Button Cursor="Hand" Margin="0,15,0,5" Click="Button_ShowSettings_OnClick">
+                    <Button.Content>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="../Assets/free-icon-setting-13309192.png" Width="40" Height="40" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Button.Content>
+                    <Button.Styles>
+                        <Style Selector="Button:pointerover ContentPresenter">
+                            <Setter Property="Background" Value="Transparent"></Setter>
+                        </Style>
+                    </Button.Styles>
+                    <Button.Styles>
+                        <Style Selector="Button">
+                            <Setter Property="Background" Value="Transparent"></Setter>
+                        </Style>
+                    </Button.Styles>
+                </Button>
+            </StackPanel>
+            
+        </SplitView.Pane>
+        
+        <SplitView.Content>
+            
+            
+                <StackPanel>
+                <Grid Height="60" Background="#191919" >
+                    <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="20" Foreground="DarkViolet" Margin="10,0,0,0" Text="[Sound Wave]"></TextBlock>
+                </Grid>
+            
+                    <!-- MainWindow -->
+                <ContentControl x:Name="ContentControl"> 
+                    
+                    
+                </ContentControl>
+                    <Grid x:Name="HomePage">
+                    <StackPanel Orientation="Horizontal">
+                    
+                    <Grid ColumnDefinitions="50,540" RowDefinitions="700,100,100" >
+                
+                    <Grid Grid.Row="0"  Grid.Column="1" Grid.RowDefinitions="640,80,100">
+                        <Image Grid.Row="0"
+                            Source="../Assets/vinilovaya-plastinka.png"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"/>
+                
+                        <TextBlock Grid.Row="1" Background="Coral">Song Description</TextBlock>
+                        
+                    </Grid>
+                    <Grid Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" >
+                        <Button Cursor="Hand" Margin="250,0,0,0" Command="{Binding Btn_PlayPause_OnClick}">
+                            <Button.Content>
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="../Assets/pause.png" Width="45" Height="45" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                </StackPanel>
+                            </Button.Content>
+                            <Button.Styles>
+                                <Style Selector="Button:pointerover ContentPresenter">
+                                    <Setter Property="Background" Value="Transparent"></Setter>
+                                </Style>
+                            </Button.Styles>
+                            <Button.Styles>
+                                <Style Selector="Button">
+                                    <Setter Property="Background" Value="Transparent"></Setter>
+                                </Style>
+                            </Button.Styles>
+                        </Button>
+                    </Grid>
+                    <Grid Grid.Column="1" Grid.Row="1" >
+                        <Button Cursor="Hand" Margin="300,0,0,0" Command="{Binding Btn_SkipNext_OnClick}">
+                            <Button.Content>
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="../Assets/napravo.png" Width="45" Height="45" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                </StackPanel>
+                                    </Button.Content>
+                            <Button.Styles>
+                                <Style Selector="Button:pointerover ContentPresenter">
+                                    <Setter Property="Background" Value="Transparent"></Setter>
+                                </Style>
+                            </Button.Styles>
+                            <Button.Styles>
+                                <Style Selector="Button">
+                                    <Setter Property="Background" Value="Transparent"></Setter>
+                                </Style>
+                            </Button.Styles>
+                        </Button>
+                    </Grid>
+                    <Grid Grid.Column="1" Grid.Row="1" >
+                        <Button Cursor="Hand" Margin="100,0,0,0" Command="{Binding Btn_SkipBack_OnClick}">
+                            <Button.Content>
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="../Assets/nalevo.png"
+                                           Width="45"
+                                           Height="45"
+                                           VerticalAlignment="Center"
+                                           HorizontalAlignment="Center"/>
+                                </StackPanel>
+                            </Button.Content>
+                            <Button.Styles>
+                                <Style Selector="Button:pointerover ContentPresenter">
+                                    <Setter Property="Background" Value="Transparent"></Setter>
+                                </Style>
+                            </Button.Styles>
+                            <Button.Styles>
+                                <Style Selector="Button">
+                                    <Setter Property="Background" Value="Transparent"></Setter>
+                                </Style>
+                            </Button.Styles>
+                        </Button>
+                    </Grid>
+                    </Grid>
+        
+                    <StackPanel>
+                        <TextBlock HorizontalAlignment="Right" 
+                                   Height="50"
+                                   TextAlignment="Center"
+                                   Background="Silver"
+                                   Width="570"
+                                   FontSize="30"
+                                   Text="Your Music"/>
+                
+                        <Grid ColumnDefinitions="50,80,280,150,60" Height="1000">
+                            <Grid Grid.Column="0" Background="Transparent"></Grid>
+                            <Grid Grid.Column="1" Background="Blue"></Grid>
+                            <Grid Grid.Column="2" Background="Goldenrod"></Grid>
+                            <Grid Grid.Column="3" Background="Crimson"></Grid>
+                            <Grid Grid.Column="4" Background="Bisque"></Grid>
+                        </Grid>
+                    </StackPanel>
+                    </StackPanel>
+                </Grid>
+                    
+                </StackPanel>
+            
+        </SplitView.Content>
+        </SplitView>
+        
+        </Grid>
+</Window>
+

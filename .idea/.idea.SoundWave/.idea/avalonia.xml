@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="Views/AddMusicWindow.axaml" value="SoundWave.csproj" />
+        <entry key="Views/Homewindow.axaml" value="SoundWave.csproj" />
+        <entry key="Views/MainWindow.axaml" value="SoundWave.csproj" />
+        <entry key="Views/SettingsWindow.axaml" value="SoundWave.csproj" />
+      </map>
+    </option>
+  </component>
+</project>
