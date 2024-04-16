@@ -1,23 +1,76 @@
-<UserControl xmlns="https://github.com/avaloniaui"
+<ContentControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:SoundWave.ViewModels"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:DataType="viewModels:AddMusicWindowViewModel"
              x:Class="SoundWave.Views.AddMusicWindow">
-
-    <StackPanel Width="1000" Height="500" >
-        <TextBlock FontSize="50"
-                   Text="Song Name"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Center"/>
+    
+    <Grid ColumnDefinitions="530,*">
+        <StackPanel Grid.Column="0"  HorizontalAlignment="Left" Margin="50,80,0,0">
+            <TextBlock FontSize="40"
+                       Text="Song Name"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"/>
         
-        <TextBox Width="500" Height="40" FontSize="20" HorizontalContentAlignment="Center" Margin="0,8,0,10"/>
+            <TextBox Width="400" Height="40" FontSize="20" HorizontalContentAlignment="Center" Margin="0,8,0,10"/>
         
-        <TextBlock HorizontalAlignment="Center"
-                   Text="Author"
-                   VerticalAlignment="Center"
-                   FontSize="50"/>
+            <TextBlock HorizontalAlignment="Center"
+                       Text="Author"
+                       VerticalAlignment="Center"
+                       FontSize="40"/>
         
-        <TextBox Width="500" Height="40" FontSize="20" HorizontalContentAlignment="Center" Margin="0,8,0,10"/>
-    </StackPanel>
-</UserControl>
+            <TextBox Width="400" Height="40" FontSize="20" HorizontalContentAlignment="Center" Margin="0,8,0,10"/>
+            <StackPanel Orientation="Horizontal" Margin="0,100,0,0">
+                <TextBlock HorizontalAlignment="Left"
+                           Text="Path"
+                           VerticalAlignment="Center"
+                           FontSize="40"/>
+                <TextBox x:Name="MusicPath" Width="400" Height="40" FontSize="20" HorizontalContentAlignment="Center" Margin="8,8,0,10"/>
+                <Button Cursor="Hand" Click="Button_OnClick">
+                    <Button.Content>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="../Assets/music-folder (1).png" Width="60" Height="60" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Button.Content>
+                    <Button.Styles>
+                        <Style Selector="Button:pointerover ContentPresenter">
+                            <Setter Property="Background" Value="Transparent"></Setter>
+                        </Style>
+                    </Button.Styles>
+                    <Button.Styles>
+                        <Style Selector="Button">
+                            <Setter Property="Background" Value="Transparent"></Setter>
+                        </Style>
+                    </Button.Styles>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="1">
+            <Border  CornerRadius="15" BorderThickness="1,1,1,1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,60,0,0" BorderBrush="#9d7ea5" Height="300" Width="300">
+                <Image x:Name="AddMusicImage"></Image>
+            </Border>
+            
+            <Button Cursor="Hand" Click="Button_AddMusicImage_OnClick" Margin="0,30,0,0" HorizontalAlignment="Center">
+                <Button.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="../Assets/download.png" Width="60" Height="60" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Button.Content>
+                <Button.Styles>
+                    <Style Selector="Button:pointerover ContentPresenter">
+                        <Setter Property="Background" Value="Transparent"></Setter>
+                    </Style>
+                </Button.Styles>
+                <Button.Styles>
+                    <Style Selector="Button">
+                        <Setter Property="Background" Value="Transparent"></Setter>
+                    </Style>
+                </Button.Styles>
+            </Button>
+        </StackPanel>
+        
+    </Grid>
+</ContentControl>

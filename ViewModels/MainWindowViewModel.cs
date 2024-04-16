@@ -25,8 +25,7 @@ namespace SoundWave.ViewModels
             Btn_PlayPause_OnClick = ReactiveCommand.Create(Btn_PlayPause);
             Btn_SkipNext_OnClick = ReactiveCommand.Create(Btn_SkipNext);
             Btn_SkipBack_OnClick = ReactiveCommand.Create(Btn_SkipBack);
-
-            Create();
+            
         }
 
         private void Btn_PlayPause()
@@ -81,13 +80,9 @@ namespace SoundWave.ViewModels
 
         private void Create()
         {
-            _mediaPlaybackList.Items.Add(new MediaPlaybackItem(
-                MediaSource.CreateFromUri(
-                    new Uri(@".wav"))));
+            _mediaPlaybackList.Items.Add(new MediaPlaybackItem(MediaSource.CreateFromUri(new Uri(@"C\Users\.wav"))));
             
-            _mediaPlaybackList.Items.Add(new MediaPlaybackItem(
-                MediaSource.CreateFromUri(
-                    new Uri(@".wav"))));
+            _mediaPlaybackList.Items.Add(new MediaPlaybackItem(MediaSource.CreateFromUri(new Uri(@"C\Users\.wav"))));
 
         }
     }

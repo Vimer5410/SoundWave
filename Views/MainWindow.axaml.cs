@@ -32,6 +32,6 @@ public partial class MainWindow : Window
     private void Button_ShowAddMusic_OnClick(object? sender, RoutedEventArgs e)
     {
         HomePage.IsVisible = false;
-        ContentControl.Content = new AddMusicWindow();
+        ContentControl.Content = new AddMusicWindow(this);
     }
 }
