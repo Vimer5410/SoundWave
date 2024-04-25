@@ -13,16 +13,16 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SoundWave
-build_property.ProjectDir = C:\Users\glebd\Projects\C#\SoundWave\
+build_property.ProjectDir = C:\Users\Gleb\source\C#\SoundWave\
 
-[C:/Users/glebd/Projects/C\#/SoundWave/App.axaml]
+[C:/Users/Gleb/source/C\#/SoundWave/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/glebd/Projects/C\#/SoundWave/Views/AddMusicWindow.axaml]
+[C:/Users/Gleb/source/C\#/SoundWave/Views/AddMusicWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/glebd/Projects/C\#/SoundWave/Views/MainWindow.axaml]
+[C:/Users/Gleb/source/C\#/SoundWave/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/glebd/Projects/C\#/SoundWave/Views/SettingsWindow.axaml]
+[C:/Users/Gleb/source/C\#/SoundWave/Views/SettingsWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

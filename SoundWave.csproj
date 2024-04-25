@@ -11,8 +11,6 @@
     <ItemGroup>
         <Folder Include="Models\"/>
         <AvaloniaResource Include="Assets\**"/>
-        <Folder Include="Music\Image\" />
-        <Folder Include="Music\Playlist\" />
     </ItemGroup>
 
     <ItemGroup>
@@ -23,6 +21,7 @@
         <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
         <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.10"/>
         <PackageReference Include="Avalonia.ReactiveUI" Version="11.0.10"/>
+        <PackageReference Include="NAudio" Version="2.2.1" />
     </ItemGroup>
 
     <ItemGroup>
@@ -30,5 +29,11 @@
         <DependentUpon>MainWindow.axaml</DependentUpon>
         <SubType>Code</SubType>
       </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="D:\!!! Скачалось !!!\Jessta_James_-_Hells_Coming_With_Me_73140822.mp3">
+        <Link>Music\Playlist\Jessta_James_-_Hells_Coming_With_Me_73140822.mp3</Link>
+      </Content>
     </ItemGroup>
 </Project>

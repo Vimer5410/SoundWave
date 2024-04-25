@@ -14,7 +14,7 @@
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"/>
         
-            <TextBox Width="400" Height="40" FontSize="20" HorizontalContentAlignment="Center" Margin="0,8,0,10"/>
+            <TextBox Width="400" Height="40" FontSize="20" HorizontalContentAlignment="Center" Margin="0,8,0,10" x:Name="SongName"/>
         
             <TextBlock HorizontalAlignment="Center"
                        Text="Author"

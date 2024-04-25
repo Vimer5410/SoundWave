@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using System.Threading.Tasks;
 using Avalonia;
 using Avalonia.Controls;
@@ -14,7 +15,8 @@ public partial class AddMusicWindow : UserControl
 {
     public Window Owner { get; }
     private Image _photoImage ;
-    
+    private string path;
+    private string songname;
 
     public AddMusicWindow(Window owner)
     {
@@ -55,5 +57,19 @@ public partial class AddMusicWindow : UserControl
         openFileDialog.Filters.Add(new FileDialogFilter { Name = "Треки композиций", Extensions = { "mp3", "wav" } });
         string[]? selectedMusicPath = await openFileDialog.ShowAsync(Owner);
         MusicPath.Text = selectedMusicPath[0];
+        
+        try
+        {
+            songname = SongName.Text+".mp3";
+            path = MusicPath.Text.Replace("\\", "\\\\");
+            Console.WriteLine(songname);
+            File.Move($"{path}",$"C:\\Users\\---\\source\\C#\\SoundWave\\Music\\{songname}", false);
+
+        }
+        catch (Exception exception)
+        {
+            Console.WriteLine(exception);
+            throw;
+        }
     }
 }

@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\glebd\\Projects\\C#\\SoundWave\\SoundWave.csproj": {}
+    "C:\\Users\\Gleb\\source\\C#\\SoundWave\\SoundWave.csproj": {}
   },
   "projects": {
-    "C:\\Users\\glebd\\Projects\\C#\\SoundWave\\SoundWave.csproj": {
+    "C:\\Users\\Gleb\\source\\C#\\SoundWave\\SoundWave.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\glebd\\Projects\\C#\\SoundWave\\SoundWave.csproj",
+        "projectUniqueName": "C:\\Users\\Gleb\\source\\C#\\SoundWave\\SoundWave.csproj",
         "projectName": "SoundWave",
-        "projectPath": "C:\\Users\\glebd\\Projects\\C#\\SoundWave\\SoundWave.csproj",
-        "packagesPath": "C:\\Users\\glebd\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\glebd\\Projects\\C#\\SoundWave\\obj\\",
+        "projectPath": "C:\\Users\\Gleb\\source\\C#\\SoundWave\\SoundWave.csproj",
+        "packagesPath": "C:\\Users\\Gleb\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Gleb\\source\\C#\\SoundWave\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\glebd\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Gleb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0-windows10.0.17763.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -61,6 +63,10 @@
             "Avalonia.Themes.Fluent": {
               "target": "Package",
               "version": "[11.0.10, )"
+            },
+            "NAudio": {
+              "target": "Package",
+              "version": "[2.2.1, )"
             }
           },
           "imports": [
@@ -76,8 +82,24 @@
           "warn": true,
           "downloadDependencies": [
             {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.2, 7.0.2]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[7.0.2, 7.0.2]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.2, 7.0.2]"
+            },
+            {
               "name": "Microsoft.Windows.SDK.NET.Ref",
-              "version": "[10.0.17763.31, 10.0.17763.31]"
+              "version": "[10.0.17763.28, 10.0.17763.28]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.2, 7.0.2]"
             }
           ],
           "frameworkReferences": {
@@ -88,7 +110,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.407\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-preview.1.23115.2\\RuntimeIdentifierGraph.json"
         }
       }
     }
